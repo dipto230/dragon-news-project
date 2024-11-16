@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { to } from './../../../node_modules/moment/src/lib/moment/to';
 
 const LeftNavbar = () => {
     const [categories, setCategories] = useState([]);
@@ -16,9 +18,9 @@ const LeftNavbar = () => {
                 
                     {
                         categories.map((category) => (
-                            <button className="btn" key={category.category_id}>
+                            <NavLink to={`/category/${category.category_id}`} className="btn" key={category.category_id}>
                                 {category.category_name}
-                            </button>
+                            </NavLink>
                         ))
                     }
             
