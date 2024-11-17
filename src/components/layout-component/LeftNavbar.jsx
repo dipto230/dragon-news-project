@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { to } from './../../../node_modules/moment/src/lib/moment/to';
+import NewsList from "../NewsList";
 
 const LeftNavbar = () => {
     const [categories, setCategories] = useState([]);
@@ -24,7 +25,11 @@ const LeftNavbar = () => {
                         ))
                     }
             
+            
             </div>
+            <NewsList></NewsList>
+            
+        
         </div>
     );
 };
